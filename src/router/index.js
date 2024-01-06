@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import TopicContent from "../newest/TopicContent.vue";
-import SubTopicContent from "../newest/SubTopicContent.vue";
+import TopicContent from "../components/TopicContent.vue";
+import SubTopicContent from "../components/SubTopicContent.vue";
 import AboutView from "../views/AboutView.vue";
 const routes = [
   // {

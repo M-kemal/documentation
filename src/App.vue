@@ -63,8 +63,8 @@
 
 <script>
 import { provide, ref } from "vue";
-import SidebarApp from "./newest/SidebarApp.vue";
-import SubHeadingList from "./newest/SubHeadingList.vue";
+import SidebarApp from "./components/SidebarApp.vue";
+import SubHeadingList from "./components/SubHeadingList.vue";
 import topics from "@/data.json";
 
 export default {

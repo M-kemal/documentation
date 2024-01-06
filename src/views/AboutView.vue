@@ -9,7 +9,9 @@
       :id="formatId(mainKey)"
       class="px-10"
     >
-      <h2 class="!text-pink-500 heading1 !text-center">{{ mainKey }}</h2>
+      <h2 class="!text-pink-500 heading1 !text-center">
+        {{ formatKey(mainKey) }}
+      </h2>
       <template v-if="isObject(mainSection)">
         <div
           v-for="(subSection, subKey) in mainSection"
@@ -74,12 +76,15 @@ export default {
 
     const isOpen = inject("isOpen");
 
+    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+
     return {
       topics: reactiveData,
       subHeadings,
       isObject,
       formatId,
       isOpen,
+      formatKey,
     };
   },
 };

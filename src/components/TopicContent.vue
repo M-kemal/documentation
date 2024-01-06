@@ -74,7 +74,7 @@ export default defineComponent({
     <h1
       class="text-center text-3xl sm:text-5xl font-header font-semibold text-[#42b883] border-b border-b-cardColorİptal border-b-titleBackground contentbg py-4"
     >
-      {{ topic }}
+      {{ formatKey(topic) }}
     </h1>
     <div v-if="isObject(content)" class="pb-96 px-10">
       <section v-for="(subContent, subKey) in content" :key="subKey" class="">
@@ -115,7 +115,9 @@ export default defineComponent({
 
     const isOpen = inject("isOpen");
 
-    return { topic, content, isObject, formatId, isOpen };
+    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+
+    return { topic, content, isObject, formatId, isOpen, formatKey };
   },
 });
 </script>

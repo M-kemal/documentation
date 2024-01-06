@@ -91,7 +91,7 @@
               </svg>
             </span>
             <span>
-              {{ title }}
+              {{ formatKey(title) }}
             </span>
           </router-link>
         </li>
@@ -139,7 +139,9 @@ export default defineComponent({
       document.removeEventListener("click", onClickOutside);
     });
 
-    return { topics, pages, handleLinkClick };
+    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+
+    return { topics, pages, handleLinkClick, formatKey };
   },
 });
 </script>

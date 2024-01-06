@@ -131,7 +131,7 @@ export default defineComponent({
               :class="isActive(subHeading) ? 'block' : 'hidden'"
             ></div>
             <span class="text-xs font-medium tracking-[.6px] leading-6">{{
-              subHeading
+              formatKey(subHeading)
             }}</span>
           </a>
         </li>
@@ -282,7 +282,9 @@ export default defineComponent({
       }
     );
 
-    return { subHeadings, setActive, isActive };
+    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+
+    return { subHeadings, setActive, isActive, formatKey };
   },
 });
 </script>
