@@ -1,5 +1,5 @@
 <template>
-  <div class="border-r border-r-cardColorİptal border-r-titleBackground h-full">
+  <div class="lg:border-r lg:border-r-zinc-500 h-full contentbg">
     <div class="h-full px-3 py-4 overflow-y-auto mkBg">
       <div
         class="w-full mx-auto py-10 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
@@ -15,12 +15,12 @@
         Main Headings
       </div>
       <ul
-        class="mt-4 flex flex-col items-start px-8 tracking-[.4px] leading-5 text-textColor"
+        class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-8 leading-5 text-textColor"
       >
         <li class="w-full">
           <router-link
             class="w-full flex items-center font-medium text-sm hover:text-text transition-colors duration-300 pb-2"
-            @click="onLinkClick"
+            @click="handleLinkClick"
             to="/about"
             v-slot="{ isActive }"
           >
@@ -59,7 +59,7 @@
           <router-link
             :to="{ name: 'Topic', params: { topic: title } }"
             class="w-full flex items-center font-medium text-sm hover:text-text transition-colors duration-300 pb-2"
-            @click="onLinkClick"
+            @click="handleLinkClick"
             v-slot="{ isActive }"
           >
             <span class="">
@@ -115,6 +115,15 @@ export default defineComponent({
       }
     };
 
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+
+    const handleLinkClick = () => {
+      onLinkClick();
+      scrollToTop();
+    };
+
     const onClickOutside = (event) => {
       const isToggleButton = event.target.closest(".toggle-outside");
       if (!isToggleButton) {
@@ -130,7 +139,7 @@ export default defineComponent({
       document.removeEventListener("click", onClickOutside);
     });
 
-    return { topics, pages, onLinkClick };
+    return { topics, pages, handleLinkClick };
   },
 });
 </script>
@@ -139,4 +148,11 @@ export default defineComponent({
 .no-hover:hover {
   color: inherit; /* Hover durumunda renk değişikliği yapma */
 }
+
+/* .contentbg {
+  background: url("../assets/content.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 </style>

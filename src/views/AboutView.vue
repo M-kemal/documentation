@@ -1,20 +1,22 @@
 <template>
   <div
-    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-titleBackground text-white"
+    class="content lg:p-4 sm:ml-72 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear !pb-96 text-white"
+    :class="{ 'blurBg': isOpen }"
   >
     <div
       v-for="(mainSection, mainKey) in topics"
       :key="mainKey"
       :id="formatId(mainKey)"
+      class="px-10"
     >
-      <h2 class="!text-pink-500 heading1">{{ mainKey }}</h2>
+      <h2 class="!text-pink-500 heading1 !text-center">{{ mainKey }}</h2>
       <template v-if="isObject(mainSection)">
         <div
           v-for="(subSection, subKey) in mainSection"
           :key="subKey"
           :id="formatId(subKey)"
         >
-          <h3 class="!text-blue-500 heading2 !mb-1 !mt-1">{{ subKey }}</h3>
+          <h3 class="!text-blue-500 heading2 !mb-1 !mt-8">{{ subKey }}</h3>
           <template v-if="isObject(subSection)">
             <div
               v-for="(innerSection, innerKey) in subSection"
@@ -44,7 +46,7 @@
 </template>
 
 <script>
-import { reactive, ref, watchEffect } from "vue";
+import { inject, reactive, ref, watchEffect } from "vue";
 import topics from "@/data.json";
 
 export default {
@@ -69,11 +71,15 @@ export default {
       });
       return headings;
     }
+
+    const isOpen = inject("isOpen");
+
     return {
       topics: reactiveData,
       subHeadings,
       isObject,
       formatId,
+      isOpen,
     };
   },
 };

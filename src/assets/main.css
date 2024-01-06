@@ -6,8 +6,15 @@
 
 body {
   @apply text-left;
-  /* background-color: #f9fafb; */
-  background-color: #1a1a1a;
+  background-color: #103b68;
+  /* background-color: linear-gradient(
+    to right,
+    #0b2142,
+    #0d2e55,
+    #103b68,
+    #12487b,
+    #14558e
+  ); */
 
   font-family: "Inter", sans-serif;
 }

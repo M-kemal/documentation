@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      :class="{ 'translate-x-0 mobileBg h-full': isOpen }"
+      class="fixed top-0 left-0 z-40 w-[272px] h-screen transition-transform -translate-x-full sm:translate-x-0 duration-300 ease-linear mobileBg"
+      :class="{ 'translate-x-0  h-full ': isOpen }"
     >
       <button
         v-if="isOpen"
@@ -31,10 +31,10 @@
     </div>
     <div class="content">
       <button
-        v-if="!isOpen"
+        :class="{ 'overflow-hidden': isOpen }"
         @click="showSideBar"
         type="button"
-        class="toggle-outside inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
+        class="toggle-outside bg-slate-700 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
       >
         <span class="sr-only">Open sidebar</span>
         <svg
@@ -86,6 +86,7 @@ export default {
     const topicData = ref(topics);
 
     provide("closeSidebar", closeSidebar);
+    provide("isOpen", isOpen);
     // provide("showSideBar", showSideBar);
 
     return { showSideBar, isOpen, topicData };
@@ -97,14 +98,20 @@ export default {
 #app {
   display: flex;
   /* background: #1a1a1a; */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #0b2142,
     #0d2e55,
     #103b68,
     #12487b,
     #14558e
-  );
+  ); */
+
+  background: url("./assets/content.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .sidebar {
@@ -134,12 +141,23 @@ a.router-link-exact-active:hover {
 
 .mobileBg {
   background: linear-gradient(
-    to right,
+    to right bottom,
     #0b2142,
     #0d2e55,
     #103b68,
     #12487b,
     #14558e
   );
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blurBg {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* background: linear-gradient(#0b2142, #14558e); */
+  filter: blur(1px);
 }
 </style>

@@ -262,7 +262,11 @@ export default defineComponent({
         });
 
       const element = await findElement();
-      element.scrollIntoView();
+      // element.scrollIntoView();
+      const offset = -24;
+      window.scroll({
+        top: element.offsetTop + offset,
+      });
     };
 
     const isActive = (subHeading) => {

@@ -68,7 +68,8 @@ export default defineComponent({
 
 <template>
   <div
-    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-cardColorİptal border-r-titleBackground"
+    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear"
+    :class="{ 'blurBg': isOpen }"
   >
     <h1
       class="text-center text-3xl sm:text-5xl font-header font-semibold text-[#42b883] border-b border-b-cardColorİptal border-b-titleBackground contentbg py-4"
@@ -94,7 +95,7 @@ export default defineComponent({
 </template>
 
 <script>
-import { defineComponent, computed } from "vue";
+import { defineComponent, computed, inject } from "vue";
 import { useRoute } from "vue-router";
 // import topics from "@/data.json";
 
@@ -112,17 +113,19 @@ export default defineComponent({
 
     const formatId = (key) => key.toLowerCase().split(" ").join("-");
 
-    return { topic, content, isObject, formatId };
+    const isOpen = inject("isOpen");
+
+    return { topic, content, isObject, formatId, isOpen };
   },
 });
 </script>
 
 <style>
 /* CSS stilinizi buraya ekleyin */
-.contentbg {
+/* .contentbg {
   background: url("../assets/content.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 </style>
