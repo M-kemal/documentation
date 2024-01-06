@@ -68,11 +68,11 @@ export default defineComponent({
 
 <template>
   <div
-    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear"
+    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500/25 transition-all duration-300 ease-linear"
     :class="{ 'blurBg': isOpen }"
   >
     <h1
-      class="text-center text-3xl sm:text-5xl font-header font-semibold text-[#42b883] border-b border-b-cardColorİptal border-b-titleBackground contentbg py-4"
+      class="text-center text-3xl sm:text-5xl font-header font-semibold text-[#42b883] border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4"
     >
       {{ formatKey(topic) }}
     </h1>

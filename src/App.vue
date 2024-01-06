@@ -2,7 +2,7 @@
   <div id="app">
     <div
       class="fixed top-0 left-0 z-40 w-[272px] h-screen transition-transform -translate-x-full sm:translate-x-0 duration-300 ease-linear mobileBg"
-      :class="{ 'translate-x-0  h-full ': isOpen }"
+      :class="{ 'translate-x-0  h-full  ': isOpen }"
     >
       <button
         v-if="isOpen"
@@ -139,25 +139,27 @@ a.router-link-exact-active:hover {
   background-size: cover;
 }
 
-.mobileBg {
-  background: linear-gradient(
-    to right bottom,
-    #0b2142,
-    #0d2e55,
-    #103b68,
-    #12487b,
-    #14558e
-  );
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .blurBg {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   /* background: linear-gradient(#0b2142, #14558e); */
-  filter: blur(1px);
+  filter: blur(1.5px);
+}
+
+@media screen and (max-width: 800px) {
+  .mobileBg {
+    background: linear-gradient(
+      to right bottom,
+      #0b2142,
+      #0d2e55,
+      #103b68,
+      #12487b,
+      #14558e
+    );
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 </style>

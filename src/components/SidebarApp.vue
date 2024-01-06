@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:border-r lg:border-r-zinc-500 h-full contentbg">
-    <div class="h-full px-3 py-4 overflow-y-auto mkBg">
+  <div class="lg:border-r lg:border-r-zinc-500/25 h-full mobileBg">
+    <div class="h-full px-3 py-4 overflow-y-auto overflow-x-hidden mkBg">
       <div
         class="w-full mx-auto py-10 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
       >
