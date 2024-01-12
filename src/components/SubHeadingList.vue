@@ -112,7 +112,7 @@ export default defineComponent({
   <div class="ml-8 mkBg hidden lg:block">
     <div class="sub-heading-list text-textColor">
       <ul v-if="subHeadings" class="sticky top-0">
-        <h3 class="heading1 !text-sm !text-textColor pt-5 !mt-0 !mb-2">
+        <h3 class="heading1 !text-xs !text-textColor pt-5 !mt-0 !mb-2">
           ON THIS PAGE
         </h3>
         <li
@@ -127,7 +127,7 @@ export default defineComponent({
             class="flex items-center"
           >
             <div
-              class="w-1 h-4 bg-[#42b883] mr-2"
+              class="w-1 h-4 bg-mkSecondary mr-2"
               :class="isActive(subHeading) ? 'block' : 'hidden'"
             ></div>
             <span class="text-xs font-medium tracking-[.6px] leading-6">{{

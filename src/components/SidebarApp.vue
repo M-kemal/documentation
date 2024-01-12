@@ -5,8 +5,8 @@
         class="w-full mx-auto py-10 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
       >
         <img src="../assets/logo.png" class="w-16 mx-auto" />
-        <h1 class="mt-4 text-sm font-body font-semibold flex items-center">
-          <span class="text-textColor">Multi-Functional Token</span>
+        <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
+          <span class="text-mkSecondary">Work Token</span>
         </h1>
       </div>
       <div
@@ -15,7 +15,7 @@
         Main Headings
       </div>
       <ul
-        class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-8 leading-5 text-textColor"
+        class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor"
       >
         <li class="w-full">
           <router-link
@@ -58,7 +58,7 @@
         <li v-for="(content, title) in topics" :key="title" class="w-full">
           <router-link
             :to="{ name: 'Topic', params: { topic: title } }"
-            class="w-full flex items-center font-medium text-sm hover:text-text transition-colors duration-300 pb-2"
+            class="w-full flex items-center text-sm font-semibold hover:text-text transition-colors duration-300 pb-2"
             @click="handleLinkClick"
             v-slot="{ isActive }"
           >
@@ -81,7 +81,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="10"
-                fill="#42b883"
+                fill="#FFF"
                 class="bi bi-circle-fill mr-2"
                 viewBox="0 0 16 16"
               >

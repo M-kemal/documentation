@@ -124,10 +124,10 @@ export default {
 }
 
 a.router-link-exact-active {
-  color: #42b883;
+  color: #f89844;
 }
 a.router-link-exact-active:hover {
-  color: #42b883;
+  color: #f89844;
 }
 
 .ImgBg {

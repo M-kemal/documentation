@@ -61,6 +61,7 @@ module.exports = {
         textColor: "#ebebeb99",
         mkPurple: "#8a2be2",
         mkBg: "#1a1a1a",
+        mkSecondary: "#f89844",
       },
       keyframes: {
         wiggle: {
