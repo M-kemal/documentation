@@ -4,19 +4,26 @@
     :class="{ 'blurBg': isOpen }"
   >
     <h1
-      class="text-center flex items-center justify-center flex-wrap w-1/2 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold text-mkSecondary border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4"
+      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4 mt-4"
     >
       {{ formatKey(topic) }}
     </h1>
-    <div v-if="isObject(content)" class="pb-96 px-4 md:px-10">
+    <div class="gradientLine"></div>
+    <div v-if="isObject(content)" class="pb-4 md:pb-96 px-4 md:px-10">
+      <!--* Özel Bölüm -->
       <p
         v-if="topic === 'Map and Future Plans'"
-        class="text-white pt-8 pb-0 !mb-0"
+        class="!text-white pt-8 !pb-0 !mb-0 heading3 !text-center underline underline-offset-8"
       >
-        The roadmap for the year 2024 includes:
+        The roadmap for the year
+        <span class="text-mkSecondary">2024</span> includes
       </p>
+      <!--* Özel Bölüm -->
       <section v-for="(subContent, subKey) in content" :key="subKey" class="">
-        <h2 :id="formatId(subKey)" class="heading1 !text-text !mb-4 pb-4">
+        <h2
+          :id="formatId(subKey)"
+          class="heading2 mt-10 !bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white !mb-0 pb-0"
+        >
           {{ subKey }}
         </h2>
 
@@ -29,9 +36,12 @@
 
         <p v-else class="text-text" v-html="subContent"></p>
         <div v-if="subKey === 'Evaluation and Expectations'" class="mt-8">
+          <!--* Özel Bölüm -->
           <p class="heading3 underline !mb-2 !text-white">
             Contact and Updates
           </p>
+          <!--* Özel Bölüm -->
+          <!--* Özel Bölüm -->
           <div class="flex flex-col">
             <div>
               <span class="text-white mr-2">E-Mail :</span>
@@ -48,6 +58,7 @@
               >
             </div>
           </div>
+          <!--* Özel Bölüm -->
         </div>
         <!--! Table1 -->
         <LayoutTable

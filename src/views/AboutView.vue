@@ -1,27 +1,38 @@
 <template>
   <div
-    class="content lg:p-4 sm:ml-72 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear !pb-96 text-white"
+    class="content lg:p-4 sm:ml-72 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear md:!pb-96 text-white"
     :class="{ 'blurBg': isOpen }"
   >
     <div
       v-for="(mainSection, mainKey) in topics"
       :key="mainKey"
       :id="formatId(mainKey)"
-      class="mx-auto md:px-10"
+      class="mx-auto px-4 md:px-10"
     >
-      <h2 class="!text-mkSecondary heading1 !text-center">
+      <h2
+        class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold !bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4 mt-4"
+      >
         {{ formatKey(mainKey) }}
       </h2>
-      <p v-if="mainKey === 'Map and Future Plans'">
-        The roadmap for the year 2024 includes:
+      <div class="gradientLine"></div>
+
+      <p
+        v-if="mainKey === 'Map and Future Plans'"
+        class="!text-white pt-8 !pb-0 !mb-0 heading3 !text-center underline underline-offset-8"
+      >
+        The roadmap for the year
+        <span class="text-mkSecondary">2024</span> includes
       </p>
+
       <template v-if="isObject(mainSection)">
         <div
           v-for="(subSection, subKey) in mainSection"
           :key="subKey"
           :id="formatId(subKey)"
         >
-          <h3 class="!text-mkSecondary/95 heading2 !mb-1 !mt-8">
+          <h3
+            class="!bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white heading2 !mb-1 !mt-8"
+          >
             {{ subKey }}
           </h3>
 
@@ -46,7 +57,7 @@
               </template>
             </div>
           </template>
-          <p v-else v-html="subSection"></p>
+          <p v-else v-html="subSection" class=""></p>
           <div v-if="subKey === 'Evaluation and Expectations'" class="mt-8">
             <p class="heading3 underline !mb-2 !text-white">
               Contact and Updates

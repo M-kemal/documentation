@@ -8,7 +8,7 @@
         v-if="isOpen"
         @click="showSideBar"
         type="button"
-        class="toggle-outside inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor bg-titleBackground focus:outline-none focus:ring-2 absolute top-0 right-2 z-50"
+        class="toggle-outside inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor bg-mkSecondary focus:outline-none focus:ring-2 absolute top-0 right-2 z-50"
       >
         <svg
           class="w-3 h-3"
@@ -34,13 +34,13 @@
         :class="{ 'overflow-hidden': isOpen }"
         @click="showSideBar"
         type="button"
-        class="toggle-outside bg-slate-700 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
+        class="toggle-outside bg-[#14558e] shadow-md flex items-center p-2 mt-4 text-center mx-auto text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
       >
         <span class="sr-only">Open sidebar</span>
         <svg
           class="w-6 h-6"
           aria-hidden="true"
-          fill="currentColor"
+          fill="#f89844"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -54,7 +54,7 @@
       <router-view :topics="topicData" />
     </div>
     <div
-      class="fixed top-0 right-0 z-50 w-64 h-screen hidden md:block overflow-scroll pb-20"
+      class="fixed top-0 right-0 z-50 w-64 h-screen hidden md:block overflow-y-scroll pb-20"
     >
       <SubHeadingList />
     </div>
@@ -165,6 +165,12 @@ a.router-link-exact-active:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content {
+    width: 100%;
   }
 }
 </style>

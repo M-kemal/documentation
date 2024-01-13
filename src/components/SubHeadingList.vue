@@ -172,7 +172,41 @@ export default defineComponent({
       }
     );
 
-    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+    const formatKey = (key) => {
+      if (key === "Current State of Web3 Games and Applications") {
+        return "Web3 Games Overview";
+      } else if (key === "Analysis of the Fragmented Structure") {
+        return "Market Fragmentation";
+      } else if (key === "Brand Awareness and Communication Strategies") {
+        return "Brand & Communication";
+      } else if (key === "Target Audience Analysis and Customized Campaigns") {
+        return "Audience & Campaigns";
+      } else if (key === "Community Creation and Social Media Activity") {
+        return "Social Media Engagement";
+      } else if (key === "Community Creation and Management") {
+        return "Community Management";
+      } else if (key === "Usage in Web3, DeFi, and Game Projects") {
+        return "Web3 & DeFi Usage";
+      } else if (key === "Low Transaction Fees and Fast Confirmations") {
+        return "Efficient Transactions";
+      } else if (key === "Community-Centric Approach and Governance") {
+        return "Community Governance";
+      } else if (
+        key === "Integration with Small Businesses and Local Markets"
+      ) {
+        return "Local Market Integration";
+      } else if (
+        key === "Artificial Intelligence and Machine Learning Integration"
+      ) {
+        return "AI & ML Integration";
+      } else if (key === "Automatic Payments with Smart Contracts") {
+        return "Smart Payments";
+      } else if (key === "Global Expansion and Multilingual Support") {
+        return "Global Expansion";
+      }
+
+      return key.replace(/([A-Z])/g, " $1").trim();
+    };
 
     return { subHeadings, setActive, isActive, formatKey };
   },

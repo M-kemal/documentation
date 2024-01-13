@@ -2,7 +2,7 @@
   <div class="lg:border-r lg:border-r-zinc-500/25 h-full mobileBg">
     <div class="h-full px-3 py-4 overflow-y-auto overflow-x-hidden mkBg">
       <div
-        class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
+        class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,14 +19,17 @@
           ></path>
         </svg>
         <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
-          <span class="text-mkSecondary">Work Token</span>
+          <span
+            class="bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
+            >Work Token</span
+          >
         </h1>
       </div>
-      <div
+      <!-- <div
         class="text-text mb-2 text-sm font-medium text-start pl-8 mt-4 w-full border-b pb-4 border-b-cardColorİptal border-b-titleBackground"
       >
         Main Headings
-      </div>
+      </div> -->
       <ul
         class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor"
       >
@@ -56,7 +59,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="10"
-                fill="#42b883"
+                fill="#FFF"
                 class="bi bi-circle-fill mr-2"
                 viewBox="0 0 16 16"
               >
@@ -152,7 +155,31 @@ export default defineComponent({
       document.removeEventListener("click", onClickOutside);
     });
 
-    const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+    // const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
+
+    const formatKey = (key) => {
+      // Özel başlık isimlerini kontrol et
+      if (key === "Token Economics, Distribution, and Staking Policy") {
+        return "Tokenomics & Staking";
+      } else if (key === "Industry Analysis and Opportunities") {
+        return "Market Insights";
+      } else if (key === "Technical Specifications and Infrastructure") {
+        return "Tech Specs";
+      } else if (key === "Business Partnerships and Collaborations") {
+        return "Partnerships";
+      } else if (key === "Sustainability and Innovation") {
+        return "Sustainable Innovation";
+      } else if (key === "Daily Use and Innovation") {
+        return "Daily Innovation";
+      } else if (key === "Marketing and Community Management") {
+        return "Marketing & Community";
+      } else if (key === "Map and Future Plans") {
+        return "Roadmap";
+      }
+
+      // Eğer özel bir isim yoksa, genel formatlama yap
+      return key.replace(/([A-Z])/g, " $1").trim();
+    };
 
     return { topics, pages, handleLinkClick, formatKey };
   },
