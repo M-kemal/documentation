@@ -97,6 +97,11 @@ export default {
 <style>
 #app {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   /* background: #1a1a1a; */
   /* background: linear-gradient(
     to right,

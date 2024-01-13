@@ -2,9 +2,22 @@
   <div class="lg:border-r lg:border-r-zinc-500/25 h-full mobileBg">
     <div class="h-full px-3 py-4 overflow-y-auto overflow-x-hidden mkBg">
       <div
-        class="w-full mx-auto py-10 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
+        class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col"
       >
-        <img src="../assets/logo.png" class="w-16 mx-auto" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-16 h-16 text-white p-2 bg-mkSecondary rounded-full"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+          ></path>
+        </svg>
         <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
           <span class="text-mkSecondary">Work Token</span>
         </h1>

@@ -8,18 +8,47 @@
     >
       {{ formatKey(topic) }}
     </h1>
-    <div v-if="isObject(content)" class="pb-96 px-3 md:px-10">
+    <div v-if="isObject(content)" class="pb-96 px-4 md:px-10">
+      <p
+        v-if="topic === 'Map and Future Plans'"
+        class="text-white pt-8 pb-0 !mb-0"
+      >
+        The roadmap for the year 2024 includes:
+      </p>
       <section v-for="(subContent, subKey) in content" :key="subKey" class="">
-        <h2 :id="formatId(subKey)" class="heading1 !text-text !mb-4 pt-10 pb-4">
+        <h2 :id="formatId(subKey)" class="heading1 !text-text !mb-4 pb-4">
           {{ subKey }}
         </h2>
+
         <div v-if="isObject(subContent)">
           <div v-for="(desc, key) in subContent" :key="key">
             <h3 class="heading3 !mb-2 !text-emerald-500">{{ key }}</h3>
             <p class="text-text" v-html="desc"></p>
           </div>
         </div>
+
         <p v-else class="text-text" v-html="subContent"></p>
+        <div v-if="subKey === 'Evaluation and Expectations'" class="mt-8">
+          <p class="heading3 underline !mb-2 !text-white">
+            Contact and Updates
+          </p>
+          <div class="flex flex-col">
+            <div>
+              <span class="text-white mr-2">E-Mail :</span>
+              <a
+                href="mailto:info@blabla.com"
+                class="text-blue-300 hover:text-blue-500"
+                >info@blabla.com</a
+              >
+            </div>
+            <div>
+              <span class="text-white mr-2">WebSite :</span>
+              <a href="www.blabla.com" class="text-blue-300 hover:text-blue-500"
+                >www.blabla.com</a
+              >
+            </div>
+          </div>
+        </div>
         <!--! Table1 -->
         <LayoutTable
           :headers="tableHeaders"
@@ -40,8 +69,14 @@
         />
         <!--! Table2 -->
       </section>
+      <p v-if="topic === 'Map and Future Plans'" class="text-white py-8">
+        This roadmap comprehensively outlines WERK Token project's goals and
+        main strategies for 2024, with each quarter set to contribute to the
+        overall success and growth of the project.
+      </p>
     </div>
     <p v-else v-html="content"></p>
+    <LayoutFooter />
   </div>
 </template>
 
@@ -52,6 +87,7 @@ import { useRoute } from "vue-router";
 import PieCard from "@/components/PieCard.vue";
 import LayoutTable from "./LayoutTable.vue";
 import { fadeUpAnimate } from "@/directives/mkAnimate";
+import LayoutFooter from "@/components/LayoutFooter.vue";
 export default defineComponent({
   props: {
     topics: {
@@ -61,6 +97,7 @@ export default defineComponent({
   components: {
     PieCard,
     LayoutTable,
+    LayoutFooter,
   },
   setup(props) {
     const route = useRoute();
@@ -145,11 +182,55 @@ export default defineComponent({
     //   }
     // });
 
+    /* function parseContent(text) {
+      // '?' işaretine göre paragraflara ayır
+      return text
+        .split("?")
+        .map((paragraph) => {
+          const regex =
+            /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
+          let result = "";
+          let lastIndex = 0;
+          let match;
+
+          while ((match = regex.exec(paragraph)) !== null) {
+            result += paragraph.slice(lastIndex, match.index);
+
+            if (match[1]) {
+              result += `<strong>${match[2]}</strong>`;
+            } else if (match[3]) {
+              result += `<em>${match[4]}</em>`;
+            } else if (match[5]) {
+              result += `<u>${match[6]}</u>`;
+            } else if (match[7]) {
+              result += `<span style="color:${match[8]}">${match[9]}</span>`;
+            }
+
+            lastIndex = regex.lastIndex;
+          }
+
+          result += paragraph.slice(lastIndex);
+          return `<p class="mt-4">${result.trim()}</p>`;
+        })
+        .join("");
+    }
+*/
+
     function parseContent(text) {
       // '?' işaretine göre paragraflara ayır
       return text
         .split("?")
         .map((paragraph) => {
+          // '=' işaretine göre listeye ayır
+          if (paragraph.includes("=")) {
+            const listItems = paragraph
+              .split("=")
+              .map((item) => `<li class="list-disc">${item.trim()}</li>`)
+              .join("");
+            paragraph = `<ul class="ml-2">${listItems}</ul>`;
+            return `<p class="mt-4">${paragraph.trim()}</p>`;
+          }
+
           const regex =
             /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
           let result = "";
@@ -400,10 +481,10 @@ export default defineComponent({
 
 <style>
 /* CSS stilinizi buraya ekleyin */
-/* .contentbg {
+.contentbg {
   background: url("../assets/content.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-} */
+}
 </style>
