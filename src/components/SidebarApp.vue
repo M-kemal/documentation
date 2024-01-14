@@ -31,7 +31,7 @@
         Main Headings
       </div> -->
       <ul
-        class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor"
+        class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor pb-32"
       >
         <li class="w-full">
           <router-link
