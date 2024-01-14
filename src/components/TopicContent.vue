@@ -4,16 +4,18 @@
     :class="{ 'blurBg': isOpen }"
   >
     <h1
-      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4 mt-4"
+      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white contentbg py-4 mt-4"
     >
       {{ formatKey(topic) }}
     </h1>
-    <div class="gradientLine"></div>
+    <div class="mx-auto px-4 md:px-10">
+      <div class="gradientLine"></div>
+    </div>
     <div v-if="isObject(content)" class="pb-4 md:pb-96 px-4 md:px-10">
       <!--* Özel Bölüm -->
       <p
         v-if="topic === 'Map and Future Plans'"
-        class="!text-white pt-8 !pb-0 !mb-0 heading3 !text-center underline underline-offset-8"
+        class="!text-white/85 pt-8 !pb-0 !mb-0 heading3 !text-center underline underline-offset-8"
       >
         The roadmap for the year
         <span class="text-mkSecondary">2024</span> includes
@@ -30,7 +32,7 @@
         <div v-if="isObject(subContent)">
           <div v-for="(desc, key) in subContent" :key="key">
             <h3 class="heading3 !mb-2 !text-emerald-500">{{ key }}</h3>
-            <p class="text-text" v-html="desc"></p>
+            <p class="text-white/85" v-html="desc"></p>
           </div>
         </div>
 
@@ -236,9 +238,12 @@ export default defineComponent({
           if (paragraph.includes("=")) {
             const listItems = paragraph
               .split("=")
-              .map((item) => `<li class="list-disc">${item.trim()}</li>`)
+              .map(
+                (item) =>
+                  `<li class="list-image-[url(checkmark-fill.svg)]">${item.trim()}</li>`
+              )
               .join("");
-            paragraph = `<ul class="ml-2">${listItems}</ul>`;
+            paragraph = `<ul class="ml-4">${listItems}</ul>`;
             return `<p class="mt-4">${paragraph.trim()}</p>`;
           }
 

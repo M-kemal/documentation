@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content lg:p-4 sm:ml-72 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear md:!pb-96 text-white"
+    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear md:!pb-96 text-white/85"
     :class="{ 'blurBg': isOpen }"
   >
     <div
@@ -10,7 +10,7 @@
       class="mx-auto px-4 md:px-10"
     >
       <h2
-        class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold !bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white border-b border-b-cardColorİptal border-b-zinc-500/25 contentbg py-4 mt-4"
+        class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold !bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white contentbg py-4 mt-4"
       >
         {{ formatKey(mainKey) }}
       </h2>
@@ -202,11 +202,12 @@ export default {
           if (paragraph.includes("=")) {
             const listItems = paragraph
               .split("=")
-              .map((item) => `<li class="list-disc">${item.trim()}</li>`)
+              .map((item) => `<li class="">${item.trim()}</li>`)
               .join("");
-            paragraph = `<ul>${listItems}</ul>`;
+            paragraph = `<ul class="ml-4 list-image-[url(checkmark-fill.svg)]">${listItems}</ul>`;
             return `<p class="mt-4">${paragraph.trim()}</p>`;
           }
+
           const regex =
             /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
           let result = "";
@@ -444,3 +445,5 @@ export default {
   components: { LayoutTable, PieCard, LayoutFooter },
 };
 </script>
+
+<style></style>

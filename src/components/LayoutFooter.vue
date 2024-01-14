@@ -1,5 +1,7 @@
 <template>
-  <footer class="text-gray-100 body-font border-t sm:ml-2 w-full">
+  <footer
+    class="text-gray-100 body-font border-t border-t-mkSecondary sm:ml-2 w-full"
+  >
     <div
       class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
     >
@@ -26,12 +28,12 @@
         >
       </a>
       <p
-        class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        class="text-sm bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-mkSecondary sm:py-2 sm:mt-0 mt-4"
       >
         © 2024 YourWerk —
         <a
           href="https://twitter.com/YourWerk"
-          class="text-gray-600 ml-1"
+          class="ml-1 text-gray-400 hover:text-blue-400"
           rel="noopener noreferrer"
           target="_blank"
           >@YourWerk</a
@@ -56,16 +58,47 @@
         </a>
         <a class="ml-3 text-gray-500">
           <svg
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
             class="w-5 h-5"
-            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width="24"
+            height="24"
+            viewBox="0 0 256 256"
+            xml:space="preserve"
           >
-            <path
-              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-            ></path>
+            <defs></defs>
+            <g
+              style="
+                stroke: none;
+                stroke-width: 0;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: none;
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+            >
+              <path
+                d="M 0.219 2.882 l 34.748 46.461 L 0 87.118 h 7.87 l 30.614 -33.073 l 24.735 33.073 H 90 L 53.297 38.043 L 85.844 2.882 h -7.87 L 49.781 33.341 L 27.001 2.882 H 0.219 z M 11.793 8.679 h 12.303 L 78.425 81.32 H 66.122 L 11.793 8.679 z"
+                style="
+                  stroke: none;
+                  stroke-width: 1;
+                  stroke-dasharray: none;
+                  stroke-linecap: butt;
+                  stroke-linejoin: miter;
+                  stroke-miterlimit: 10;
+                  fill: currentColor;
+                  fill-rule: nonzero;
+                  opacity: 1;
+                "
+                transform=" matrix(1 0 0 1 0 0) "
+                stroke-linecap="round"
+              />
+            </g>
           </svg>
         </a>
         <a class="ml-3 text-gray-500">
@@ -114,4 +147,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped></style>
