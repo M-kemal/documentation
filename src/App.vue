@@ -52,6 +52,11 @@
         </svg>
       </button>
       <router-view :topics="topicData" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, error
+        sunt? Adipisci, quam ab. Magni voluptate, atque aliquid vel error fugiat
+        ullam dolore quos obcaecati. Dolorem eveniet nihil ipsa pariatur.
+      </p>
     </div>
     <div
       class="fixed top-0 right-0 z-50 w-64 h-screen hidden md:block overflow-y-scroll pb-20"
