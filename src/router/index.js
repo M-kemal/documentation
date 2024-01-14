@@ -13,6 +13,10 @@ const routes = [
     name: "home",
     component: HomeView,
   },
+  {
+    path: "/documentation/",
+    redirect: "/",
+  },
   // {
   //   path: "/",
   //   name: "about",
