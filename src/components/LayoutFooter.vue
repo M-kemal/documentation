@@ -33,7 +33,7 @@
         © 2024 YourWerk —
         <a
           href="https://twitter.com/YourWerk"
-          class="ml-1 text-gray-400 hover:text-blue-400"
+          class="ml-1 text-gray-400 hover:text-blue-500"
           rel="noopener noreferrer"
           target="_blank"
           >@YourWerk</a
