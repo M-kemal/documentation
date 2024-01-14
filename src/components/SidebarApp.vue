@@ -37,7 +37,7 @@
           <router-link
             class="w-full flex items-center font-medium text-sm hover:text-text transition-colors duration-300 pb-2"
             @click="handleLinkClick"
-            to="/"
+            to="/home"
             v-slot="{ isActive }"
           >
             <span class="">
