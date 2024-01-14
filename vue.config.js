@@ -12,6 +12,5 @@ const path = require("path");
 module.exports = defineConfig({
   transpileDependencies: true,
   outputDir: path.resolve(__dirname, "./docs"),
-  publicPath:
-    process.env.NODE_ENV !== "development" ? "/documentation" : "/home",
+  publicPath: process.env.NODE_ENV !== "development" ? "/" : "/home",
 });
