@@ -8,7 +8,7 @@
       <a
         class="flex title-font font-medium items-center md:justify-start justify-center text-gray-100"
       >
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           stroke="currentColor"
@@ -21,10 +21,11 @@
           <path
             d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
           ></path>
-        </svg>
+        </svg> -->
+        <img src="../assets/logo1.svg" class="w-14 h-1w-14" alt="">
         <span
-          class="ml-3 text-xl bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
-          >Werk 1000X</span
+          class="ml-0 text-xl bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
+          >WERK 1000X</span
         >
       </a>
       <p

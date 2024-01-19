@@ -19,11 +19,11 @@
           ></path>
         </svg> -->
 
-        <img src="../assets/logo2.svg" class="w-44 h-44" alt="">
-        <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
+        <img src="../assets/logo1.svg" class="w-44 h-44" alt="">
+        <h1 class="mt-0 text-xl font-header font-semibold flex items-center">
           <span
-            class="bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
-            >Werk 1000X</span
+            class="bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
+            >WERK 1000X</span
           >
         </h1>
       </div>
