@@ -4,7 +4,7 @@
       <div
         class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col cursor-pointer"
       >
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           stroke="currentColor"
@@ -17,7 +17,9 @@
           <path
             d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
           ></path>
-        </svg>
+        </svg> -->
+
+        <img src="../assets/logo2.svg" class="w-44 h-44" alt="">
         <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
           <span
             class="bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
