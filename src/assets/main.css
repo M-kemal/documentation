@@ -44,7 +44,7 @@ body {
 .heading2 {
   @apply font-medium
       text-gray-600
-      capitalize
+      /* capitalize */
       text-left
       text-2xl
       h8:text-3xl

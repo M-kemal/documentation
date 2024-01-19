@@ -24,19 +24,19 @@
         </svg>
         <span
           class="ml-3 text-xl bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
-          >YourWerk</span
+          >Werk 1000X</span
         >
       </a>
       <p
         class="text-sm bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-mkSecondary sm:py-2 sm:mt-0 mt-4"
       >
-        © 2024 YourWerk —
+        © 2024 Werk 1000X —
         <a
           href="https://twitter.com/YourWerk"
           class="ml-1 text-gray-400 hover:text-blue-500"
           rel="noopener noreferrer"
           target="_blank"
-          >@YourWerk</a
+          >@Werk1000X</a
         >
       </p>
       <span

@@ -21,7 +21,7 @@
         <h1 class="mt-4 text-xl font-body font-semibold flex items-center">
           <span
             class="bg-clip-text !text-transparent bg-gradient-to-r from-mkSecondary to-white"
-            >Werk Token</span
+            >Werk 1000X</span
           >
         </h1>
       </div>
