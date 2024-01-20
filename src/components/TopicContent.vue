@@ -240,7 +240,7 @@ export default defineComponent({
               .split("=")
               .map(
                 (item) =>
-                  `<li class="list-image-[url(checkmark-fill.svg)]">${item.trim()}</li>`
+                  `<li class="list-image-[url(checkmark-fill.svg)] mb-4">${item.trim()}</li>`
               )
               .join("");
             paragraph = `<ul class="ml-4">${listItems}</ul>`;
