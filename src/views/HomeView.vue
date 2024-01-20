@@ -108,7 +108,7 @@
           <!--! Table2 -->
         </div>
         <p v-if="mainKey === 'Map and Future Plans'" class="py-10">
-          This roadmap comprehensively outlines WERK Token project's goals and
+          This roadmap comprehensively outlines WERK 1000X project's goals and
           main strategies for 2024, with each quarter set to contribute to the
           overall success and growth of the project.
         </p>
@@ -202,7 +202,7 @@ export default {
           if (paragraph.includes("=")) {
             const listItems = paragraph
               .split("=")
-              .map((item) => `<li class="">${item.trim()}</li>`)
+              .map((item) => `<li class="mb-4">${item.trim()}</li>`)
               .join("");
             paragraph = `<ul class="ml-4 list-image-[url(checkmark-fill.svg)]">${listItems}</ul>`;
             return `<p class="mt-4">${paragraph.trim()}</p>`;
@@ -250,9 +250,9 @@ export default {
       }
     });
 
-    //* Table 1
+   //* Table 1
 
-    const tableHeaders = ref([
+   const tableHeaders = ref([
       "Token Holders",
       "Distribution",
       "Tokens",
@@ -263,70 +263,70 @@ export default {
       {
         holders: "Presale",
         distribution: "%5",
-        tokens: "5.000.000",
+        tokens: "50",
         remarks: "",
-        tokenPrice: "$0.20",
+        tokenPrice: "$20.000",
       },
       {
         holders: "Public Sale - Round 1",
         distribution: "%5",
-        tokens: "5.000.000",
+        tokens: "50",
         remarks: "",
-        tokenPrice: "$0.30",
+        tokenPrice: "$30.000",
       },
       {
         holders: "Public Sale - Round 2",
         distribution: "%5",
-        tokens: "5.000.000",
+        tokens: "50",
         remarks: "",
-        tokenPrice: "$0.40",
+        tokenPrice: "$40.000",
       },
       {
         holders: "Liquidity Pool",
         distribution: "%3",
-        tokens: "3.000.000",
+        tokens: "30",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "Team / Advisors",
         distribution: "%7",
-        tokens: "7.000.000",
+        tokens: "70",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "Staking Rewards",
         distribution: "%8",
-        tokens: "8.000.000",
+        tokens: "80",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "Eco-system Development",
         distribution: "%9",
-        tokens: "9.000.000",
+        tokens: "90",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "Marketing",
         distribution: "%8",
-        tokens: "8.000.000",
+        tokens: "80",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "TOKEN BURN",
         distribution: "%50",
-        tokens: "50.000.000",
+        tokens: "500",
         remarks: "",
         tokenPrice: "",
       },
       {
         holders: "TOTAL",
         distribution: "%100",
-        tokens: "100.000.000",
+        tokens: "1000",
         remarks: "",
         tokenPrice: "",
       },
@@ -343,89 +343,89 @@ export default {
     ]);
 
     const tableData2 = ref([
-      {
+    {
         month: "January 2024",
-        total: "100,000,000",
-        distribution: "4,166,667",
+        total: "1.000",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "95,833,333",
+        remaining: "958,33333",
       },
       {
         month: "February 2024",
-        total: "95,833,333",
-        distribution: "4,166,667",
+        total: "958,33333",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "91,666,667",
+        remaining: "916,66667",
       },
       {
         month: "March 2024",
-        total: "91,666,667",
-        distribution: "4,166,667",
+        total: "916,66667",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "87,500,000",
+        remaining: "875",
       },
       {
         month: "April 2024",
-        total: "87,500,000",
-        distribution: "4,166,667",
+        total: "875",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "83,333,333",
+        remaining: "833,33333",
       },
       {
         month: "May 2024",
-        total: "83,333,333",
-        distribution: "4,166,667",
+        total: "833,33333",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "79,166,667",
+        remaining: "791,66667",
       },
       {
         month: "June 2024",
-        total: "79,166,667",
-        distribution: "4,166,667",
+        total: "791,66667",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "75,000,000",
+        remaining: "750",
       },
       {
         month: "July 2024",
-        total: "75,000,000",
-        distribution: "4,166,667",
+        total: "750",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "70,833,333",
+        remaining: "708,33333",
       },
       {
         month: "August 2024",
-        total: "70,833,333",
-        distribution: "4,166,667",
+        total: "708,33333",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "66,666,667",
+        remaining: "666,66667",
       },
       {
         month: "September 2024",
-        total: "66,666,667",
-        distribution: "4,166,667",
+        total: "666,66667",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "62,500,000",
+        remaining: "625",
       },
       {
         month: "October 2024",
-        total: "62,500,000",
-        distribution: "4,166,667",
+        total: "625",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "58,333,333",
+        remaining: "583,33333",
       },
       {
         month: "November 2024",
-        total: "58,333,333",
-        distribution: "4,166,667",
+        total: "583,33333",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "54,166,667",
+        remaining: "541,66667",
       },
       {
         month: "December 2024",
-        total: "54,166,667",
-        distribution: "4,166,667",
+        total: "541,66667",
+        distribution: "41,66667",
         remarks: "TBD",
-        remaining: "50,000,000",
+        remaining: "500",
       },
     ]);
 

@@ -83,7 +83,7 @@
         <!--! Table2 -->
       </section>
       <p v-if="topic === 'Map and Future Plans'" class="text-white py-8">
-        This roadmap comprehensively outlines WERK Token project's goals and
+        This roadmap comprehensively outlines WERK 1000X project's goals and
         main strategies for 2024, with each quarter set to contribute to the
         overall success and growth of the project.
       </p>
