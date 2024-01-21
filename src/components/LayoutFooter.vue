@@ -22,9 +22,9 @@
             d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
           ></path>
         </svg> -->
-        <img src="../assets/logo1.svg" class="w-14 h-1w-14" alt="">
+        <img src="../assets/logo5.svg" class="w-12" alt="">
         <span
-          class="ml-0 text-xl bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
+          class="ml-2 text-xl bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
           >WERK 1000X</span
         >
       </a>
