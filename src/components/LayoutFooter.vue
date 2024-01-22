@@ -8,20 +8,6 @@
       <a
         class="flex title-font font-medium items-center md:justify-start justify-center text-gray-100"
       >
-        <!-- <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-10 h-10 text-white p-2 bg-mkSecondary rounded-full"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-          ></path>
-        </svg> -->
         <img src="../assets/logo5.svg" class="w-12" alt="">
         <span
           class="ml-2 text-xl bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
@@ -33,7 +19,7 @@
       >
         © 2024 Werk 1000X —
         <a
-          href="https://twitter.com/YourWerk"
+          href="https://twitter.com/Werk_1000X"
           class="ml-1 text-gray-400 hover:text-blue-500"
           rel="noopener noreferrer"
           target="_blank"
@@ -43,21 +29,7 @@
       <span
         class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
       >
-        <a class="text-gray-500">
-          <svg
-            fill="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-            ></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500">
+        <a class="ml-3 text-gray-500" href="https://twitter.com/Werk_1000X" target="_blank">
           <svg
             class="w-5 h-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +64,7 @@
                   stroke-linecap: butt;
                   stroke-linejoin: miter;
                   stroke-miterlimit: 10;
-                  fill: currentColor;
+                  fill: #f89844;
                   fill-rule: nonzero;
                   opacity: 1;
                 "
@@ -102,41 +74,13 @@
             </g>
           </svg>
         </a>
-        <a class="ml-3 text-gray-500">
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-          >
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path
-              d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
-            ></path>
-          </svg>
+        <a class="ml-3 text-gray-500" href="https://t.me/WERK1000x" target="_blank">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z" fill="#f89844"/>
+        </svg>
         </a>
-        <a class="ml-3 text-gray-500">
-          <svg
-            fill="currentColor"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="0"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="none"
-              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-            ></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500 hover:text-mkSecondary" href="https://www.youtube.com/channel/UCQlgdA0AOCQEnl5gGSmwy3A">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+        <a class="ml-3 text-gray-500 hover:text-mkSecondary" href="https://www.youtube.com/channel/UCQlgdA0AOCQEnl5gGSmwy3A" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f89844" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
         </a>
       </span>
     </div>
