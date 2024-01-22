@@ -92,7 +92,7 @@
     <p v-else v-html="content"></p>
     <div class="header ">
     <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
-      <a href="https://yasinbg.github.io/yourwerk/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
+      <a href="https://werk1000x.netlify.app/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
     </h3>
 
     <div class="gradientLine mx-auto md:ml-2"></div>
