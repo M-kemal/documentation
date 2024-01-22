@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500 transition-all duration-300 ease-linear md:!pb-96 text-white/85"
+    class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500/25 transition-all duration-300 ease-linear md:!pb-96 text-white/85"
     :class="{ 'blurBg': isOpen }"
   >
     <div
@@ -115,6 +115,13 @@
       </template>
       <p v-else>{{ mainSection }}</p>
     </div>
+    <div class="header pt-8">
+    <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
+      <a href="https://yasinbg.github.io/yourwerk/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
+    </h3>
+
+    <!-- <div class="gradientLine mx-auto md:ml-2"></div> -->
+  </div>
     <LayoutFooter class="mt-8" />
   </div>
 </template>

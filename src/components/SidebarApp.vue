@@ -2,36 +2,18 @@
   <div class="lg:border-r lg:border-r-zinc-500/25 h-full mobileBg">
     <div class="h-full px-3 py-4 overflow-y-auto overflow-x-hidden mkBg">
       <div
-        class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-titleBackground flex items-center flex-col cursor-pointer"
+        class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-zinc-500/25 flex items-center flex-col cursor-pointer"
+        @click="scrollToTop"
       >
-        <!-- <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-16 h-16 text-white p-2 bg-mkSecondary rounded-full"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-          ></path>
-        </svg> -->
-
         <img src="../assets/logo5.svg" class="w-" alt="">
-        <h1 class="mt-0 text-xl font-header font-semibold flex items-center">
+        <h1 class="mt-0 text-xl font-header font-semibold flex items-center pt-2">
           <span
             class="bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
             >WERK 1000X</span
           >
         </h1>
       </div>
-      <!-- <div
-        class="text-text mb-2 text-sm font-medium text-start pl-8 mt-4 w-full border-b pb-4 border-b-cardColorİptal border-b-titleBackground"
-      >
-        Main Headings
-      </div> -->
+     
       <ul
         class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor pb-32"
       >
@@ -70,7 +52,7 @@
                 />
               </svg>
             </span>
-            <span> All </span>
+            <span> All Titles </span>
           </router-link>
         </li>
         <li v-for="(content, title) in topics" :key="title" class="w-full">
@@ -183,7 +165,7 @@ export default defineComponent({
       return key.replace(/([A-Z])/g, " $1").trim();
     };
 
-    return { topics, pages, handleLinkClick, formatKey };
+    return { topics, pages, handleLinkClick, formatKey,scrollToTop };
   },
 });
 </script>

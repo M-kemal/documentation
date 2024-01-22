@@ -3,6 +3,7 @@
     class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500/25 transition-all duration-300 ease-linear"
     :class="{ 'blurBg': isOpen }"
   >
+  
     <h1
       class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white contentbg py-4 mt-4"
     >
@@ -89,6 +90,13 @@
       </p>
     </div>
     <p v-else v-html="content"></p>
+    <div class="header ">
+    <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
+      <a href="https://yasinbg.github.io/yourwerk/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
+    </h3>
+
+    <div class="gradientLine mx-auto md:ml-2"></div>
+  </div>
     <LayoutFooter />
   </div>
 </template>

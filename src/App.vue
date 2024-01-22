@@ -34,7 +34,7 @@
         :class="{ 'overflow-hidden': isOpen }"
         @click="showSideBar"
         type="button"
-        class="toggle-outside bg-[#14558e] shadow-md flex items-center p-2 mt-4 text-center mx-auto text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
+        class="toggle-outside bg-[#1a1a1a] shadow-md flex items-center p-2 mt-4 text-center mx-auto text-sm text-gray-100 rounded-lg sm:hidden hover:bg-textColor focus:outline-none focus:ring-2"
       >
         <span class="sr-only">Open sidebar</span>
         <svg
@@ -112,11 +112,11 @@ export default {
     #14558e
   ); */
 
-  background: url("./assets/content.svg");
+  /* background: url("./assets/content.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .sidebar {
@@ -153,7 +153,7 @@ a.router-link-exact-active:hover {
 
 @media screen and (max-width: 800px) {
   .mobileBg {
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right bottom,
       #0b2142,
       #0d2e55,
@@ -164,7 +164,9 @@ a.router-link-exact-active:hover {
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
+
+    background-color: #0e0e0e;
   }
 }
 
