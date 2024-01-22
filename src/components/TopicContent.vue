@@ -49,15 +49,15 @@
             <div>
               <span class="text-white mr-2">E-Mail :</span>
               <a
-                href="mailto:info@blabla.com"
+                href="mailto:info@comingsoon.com"
                 class="text-blue-300 hover:text-blue-500"
-                >info@blabla.com</a
+                >info@comingsoon.com</a
               >
             </div>
             <div>
               <span class="text-white mr-2">WebSite :</span>
-              <a href="www.blabla.com" class="text-blue-300 hover:text-blue-500"
-                >www.blabla.com</a
+              <a href="https://werk1000x.netlify.app/" class="text-blue-300 hover:text-blue-500"
+                >https://werk1000x.netlify.app/</a
               >
             </div>
           </div>

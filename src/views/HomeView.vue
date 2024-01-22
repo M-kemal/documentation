@@ -64,21 +64,19 @@
             </p>
             <div class="flex flex-col">
               <div>
-                <span class="text-white mr-2">E-Mail :</span>
-                <a
-                  href="mailto:info@blabla.com"
-                  class="text-blue-300 hover:text-blue-500"
-                  >info@blabla.com</a
-                >
-              </div>
-              <div>
-                <span class="text-white mr-2">WebSite :</span>
-                <a
-                  href="www.blabla.com"
-                  class="text-blue-300 hover:text-blue-500"
-                  >www.blabla.com</a
-                >
-              </div>
+              <span class="text-white mr-2">E-Mail :</span>
+              <a
+                href="mailto:info@comingsoon.com"
+                class="text-blue-300 hover:text-blue-500"
+                >info@comingsoon.com</a
+              >
+            </div>
+            <div>
+              <span class="text-white mr-2">WebSite :</span>
+              <a href="https://werk1000x.netlify.app/" class="text-blue-300 hover:text-blue-500"
+                >https://werk1000x.netlify.app/</a
+              >
+            </div>
             </div>
           </div>
           <!--! Table1 -->
