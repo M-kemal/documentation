@@ -12,11 +12,6 @@
           </thead>
           <tbody class="text-white">
             <tr v-for="row in data" :key="row.id">
-              <!-- :class="
-                  key === Object.keys(row)[0]
-                    ? 'border px-4 py-2 bg-gray-800 text-gray-200 text-sm font-semibold'
-                    : 'border px-4 py-2 text-xs'
-                " -->
               <td
                 v-for="(value, key, index) in row"
                 :key="key"
@@ -46,17 +41,6 @@ export default {
       2: "bg-[#B70404]",
       3: "bg-[#14558e]",
       4: "bg-[#B70404]",
-
-      // 1: "bg-orange-500",
-      // 2: "bg-red-500",
-      // 3: "bg-green-500",
-      // 4: "bg-teal-600",
-
-      // #0b2142,
-      // #0d2e55,
-      // #103b68,
-      // #12487b,
-      // #14558e
     });
 
     const getClass = (index) => {

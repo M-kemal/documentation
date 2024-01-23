@@ -43,24 +43,11 @@ import { useRoute, useRouter } from "vue-router";
 import topics from "@/data.json";
 
 export default defineComponent({
-  // props: {
-  //   topics: {
-  //     type: Object,
-  //   },
-  // },
+ 
   setup() {
     const route = useRoute();
     const activeSubHeading = ref("");
     const router = useRouter();
-
-    // const subHeadings = computed(() => {
-    //   const topicData = props.topics[route.params.topic];
-    //   return topicData && typeof topicData === "object"
-    //     ? Object.keys(topicData)
-    //     : [];
-    // });
-
-    // ...
 
     const subHeadings = computed(() => {
       if (route.params.topic) {
@@ -112,17 +99,6 @@ export default defineComponent({
     onUnmounted(() => {
       window.removeEventListener("scroll", checkActiveSubHeading);
     });
-
-    // const setActive = (subHeading) => {
-    //   activeSubHeading.value = subHeading;
-    //   scrollTo(subHeading);
-    //   const topic = route.params.topic;
-    //   router.push({
-    //     name: "Topic",
-    //     params: { topic: topic },
-    //     query: { subHeading: subHeading.toLowerCase().split(" ").join("-") },
-    //   });
-    // };
 
     const setActive = (subHeading) => {
       activeSubHeading.value = subHeading;
@@ -221,6 +197,6 @@ export default defineComponent({
     255,
     255,
     0.87
-  ); /* Örnek stil, ihtiyaca göre değiştirilebilir */
+  ); 
 }
 </style>

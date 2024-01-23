@@ -103,7 +103,6 @@
 <script>
 import { defineComponent, inject, onBeforeUnmount, onMounted } from "vue";
 import topics from "@/data.json";
-import pages from "@/pages.json";
 
 export default defineComponent({
   setup() {
@@ -165,7 +164,8 @@ export default defineComponent({
       return key.replace(/([A-Z])/g, " $1").trim();
     };
 
-    return { topics, pages, handleLinkClick, formatKey,scrollToTop };
+    return { topics, handleLinkClick, formatKey,scrollToTop
+     };
   },
 });
 </script>
@@ -175,10 +175,4 @@ export default defineComponent({
   color: inherit; /* Hover durumunda renk değişikliği yapma */
 }
 
-/* .contentbg {
-  background: url("../assets/content.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 </style>

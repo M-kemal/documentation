@@ -117,7 +117,6 @@
     <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
       <a href="https://werk1000x.netlify.app/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
     </h3>
-
     <!-- <div class="gradientLine mx-auto md:ml-2"></div> -->
   </div>
     <LayoutFooter class="mt-8" />
@@ -156,47 +155,7 @@ export default {
     const isOpen = inject("isOpen");
     const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
     //* data yazım
-    // function parseContent(text) {
-    //   const regex =
-    //     /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
-    //   let result = "";
-    //   let lastIndex = 0;
-    //   let match;
-    //   while ((match = regex.exec(text)) !== null) {
-    //     result += text.slice(lastIndex, match.index);
-    //     if (match[1]) {
-    //       // Kalın metin için
-    //       result += `<strong>${match[2]}</strong>`;
-    //     } else if (match[3]) {
-    //       // İtalik metin için
-    //       result += `<em>${match[4]}</em>`;
-    //     } else if (match[5]) {
-    //       // Altı çizili metin için
-    //       result += `<u>${match[6]}</u>`;
-    //     } else if (match[7]) {
-    //       // Renkli metin için
-    //       result += `<span style="color:${match[8]}">${match[9]}</span>`;
-    //     }
-    //     lastIndex = regex.lastIndex;
-    //   }
-    //   result += text.slice(lastIndex);
-    //   return result;
-    // }
-    // const parsedTopics = computed(() => {
-    //   const parseSection = (section) => {
-    //     if (isObject(section)) {
-    //       const newSection = {};
-    //       for (const key in section) {
-    //         newSection[key] = parseSection(section[key]);
-    //       }
-    //       return newSection;
-    //     } else if (typeof section === "string") {
-    //       return parseContent(section);
-    //     }
-    //     return section;
-    //   };
-    //   return parseSection(reactiveData);
-    // });
+    
     //* topicContentYazımı
     function parseContent(text) {
       // '?' işaretine göre paragraflara ayır

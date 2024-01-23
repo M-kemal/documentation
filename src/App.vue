@@ -102,46 +102,14 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100%;
-  /* background: #1a1a1a; */
-  /* background: linear-gradient(
-    to right,
-    #0b2142,
-    #0d2e55,
-    #103b68,
-    #12487b,
-    #14558e
-  ); */
-
-  /* background: url("./assets/content.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; */
 }
 
-.sidebar {
-}
-
-.content {
-}
-
-.sub-heading-list {
-}
 
 a.router-link-exact-active {
   color: #f89844;
 }
 a.router-link-exact-active:hover {
   color: #f89844;
-}
-
-.ImgBg {
-  /* background: url("../assets/mkover.webp"); */
-  background: url("./assets/mkover.webp");
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .blurBg {
@@ -153,19 +121,6 @@ a.router-link-exact-active:hover {
 
 @media screen and (max-width: 800px) {
   .mobileBg {
-    /* background: linear-gradient(
-      to right bottom,
-      #0b2142,
-      #0d2e55,
-      #103b68,
-      #12487b,
-      #14558e
-    );
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; */
-
     background-color: #0e0e0e;
   }
 }

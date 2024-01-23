@@ -5,7 +5,7 @@
   >
   
     <h1
-      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white contentbg py-4 mt-4"
+      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white  py-4 mt-4"
     >
       {{ formatKey(topic) }}
     </h1>
@@ -133,109 +133,6 @@ export default defineComponent({
     const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
 
     //* Data kalın yazma
-
-    // function parseContent(text) {
-    //   const regex = /\*\*(.*?)\*\*/g;
-    //   let result = "";
-    //   let lastIndex = 0;
-
-    //   let match;
-    //   while ((match = regex.exec(text)) !== null) {
-    //     result += text.slice(lastIndex, match.index);
-    //     result += `<strong>${match[1]}</strong>`;
-    //     lastIndex = regex.lastIndex;
-    //   }
-    //   result += text.slice(lastIndex);
-
-    //   return result;
-    // }
-
-    // function parseContent(text) {
-    //   const regex =
-    //     /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
-    //   // kalın metin için **metin**, italik için *metin*, ve altı çizili için _metin_
-    //   let result = "";
-    //   let lastIndex = 0;
-
-    //   let match;
-    //   while ((match = regex.exec(text)) !== null) {
-    //     result += text.slice(lastIndex, match.index);
-
-    //     if (match[1]) {
-    //       // Kalın metin için
-    //       result += `<strong>${match[2]}</strong>`;
-    //     } else if (match[3]) {
-    //       // İtalik metin için
-    //       result += `<em>${match[4]}</em>`;
-    //     } else if (match[5]) {
-    //       // Altı çizili metin için
-    //       result += `<u>${match[6]}</u>`;
-    //     } else if (match[7]) {
-    //       // Renkli metin için
-    //       result += `<span style="color:${match[8]}">${match[9]}</span>`;
-    //     }
-
-    //     lastIndex = regex.lastIndex;
-    //   }
-
-    //   result += text.slice(lastIndex);
-    //   return result;
-    // }
-
-    // const parsedContent = computed(() => {
-    //   if (isObject(content.value)) {
-    //     const newContent = {};
-    //     for (const key in content.value) {
-    //       if (isObject(content.value[key])) {
-    //         newContent[key] = {};
-    //         for (const subKey in content.value[key]) {
-    //           newContent[key][subKey] = parseContent(
-    //             content.value[key][subKey]
-    //           );
-    //         }
-    //       } else {
-    //         newContent[key] = parseContent(content.value[key]);
-    //       }
-    //     }
-    //     return newContent;
-    //   } else {
-    //     return parseContent(content.value);
-    //   }
-    // });
-
-    /* function parseContent(text) {
-      // '?' işaretine göre paragraflara ayır
-      return text
-        .split("?")
-        .map((paragraph) => {
-          const regex =
-            /(\*\*(.*?)\*\*)|(\*(.*?)\*)|(_(.*?)_)|(\{([a-zA-Z]+)\}(.*?)\{\/\8\})/g;
-          let result = "";
-          let lastIndex = 0;
-          let match;
-
-          while ((match = regex.exec(paragraph)) !== null) {
-            result += paragraph.slice(lastIndex, match.index);
-
-            if (match[1]) {
-              result += `<strong>${match[2]}</strong>`;
-            } else if (match[3]) {
-              result += `<em>${match[4]}</em>`;
-            } else if (match[5]) {
-              result += `<u>${match[6]}</u>`;
-            } else if (match[7]) {
-              result += `<span style="color:${match[8]}">${match[9]}</span>`;
-            }
-
-            lastIndex = regex.lastIndex;
-          }
-
-          result += paragraph.slice(lastIndex);
-          return `<p class="mt-4">${result.trim()}</p>`;
-        })
-        .join("");
-    }
-*/
 
     function parseContent(text) {
       // '?' işaretine göre paragraflara ayır
@@ -504,11 +401,5 @@ export default defineComponent({
 </script>
 
 <style>
-/* CSS stilinizi buraya ekleyin */
-.contentbg {
-  background: url("../assets/content.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 </style>
