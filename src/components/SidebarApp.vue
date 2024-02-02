@@ -5,15 +5,17 @@
         class="w-full mx-auto py-8 border-b border-b-cardColorİptal border-b-zinc-500/25 flex items-center flex-col cursor-pointer"
         @click="scrollToTop"
       >
-        <img src="../assets/logo5.svg" class="w-" alt="">
-        <h1 class="mt-0 text-xl font-header font-semibold flex items-center pt-2">
+        <img src="../assets/logo.png" class="w-44 h-44" alt="" />
+        <h1
+          class="mt-0 text-xl font-header font-semibold flex items-center pt-2"
+        >
           <span
             class="bg-clip-text !text-transparent bg-gradient-to-l from-mkSecondary to-white"
             >WERK 1000X</span
           >
         </h1>
       </div>
-     
+
       <ul
         class="mt-4 flex flex-col items-start tracking-[.4px] w-full mx-2 leading-5 text-textColor pb-32"
       >
@@ -164,8 +166,7 @@ export default defineComponent({
       return key.replace(/([A-Z])/g, " $1").trim();
     };
 
-    return { topics, handleLinkClick, formatKey,scrollToTop
-     };
+    return { topics, handleLinkClick, formatKey, scrollToTop };
   },
 });
 </script>
@@ -174,5 +175,4 @@ export default defineComponent({
 .no-hover:hover {
   color: inherit; /* Hover durumunda renk değişikliği yapma */
 }
-
 </style>

@@ -32,9 +32,15 @@ import { reactive } from "vue";
 
 export default {
   props: {
-    headers: Array,
-    data: Array,
+  headers: {
+    type: Array,
+    required: true
   },
+  data: {
+    type: Array,
+    required: true
+  }
+},
   setup() {
     const columnColors = reactive({
       1: "bg-[#14558e]",

@@ -64,19 +64,21 @@
             </p>
             <div class="flex flex-col">
               <div>
-              <span class="text-white mr-2">E-Mail :</span>
-              <a
-                href="mailto:info@comingsoon.com"
-                class="text-blue-300 hover:text-blue-500"
-                >info@comingsoon.com</a
-              >
-            </div>
-            <div>
-              <span class="text-white mr-2">WebSite :</span>
-              <a href="https://werk1000x.netlify.app/" class="text-blue-300 hover:text-blue-500"
-                >https://werk1000x.netlify.app/</a
-              >
-            </div>
+                <span class="text-white mr-2">E-Mail :</span>
+                <a
+                  href="mailto:contact@werk1000x.com"
+                  class="text-blue-300 hover:text-blue-500"
+                  >contact@werk1000x.com</a
+                >
+              </div>
+              <div>
+                <span class="text-white mr-2">Website :</span>
+                <a
+                  href="https://www.werk1000x.com"
+                  class="text-blue-300 hover:text-blue-500"
+                  >https://www.werk1000x.com</a
+                >
+              </div>
             </div>
           </div>
           <!--! Table1 -->
@@ -114,11 +116,15 @@
       <p v-else>{{ mainSection }}</p>
     </div>
     <div class="header pt-8">
-    <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
-      <a href="https://werk1000x.netlify.app/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
-    </h3>
-    <!-- <div class="gradientLine mx-auto md:ml-2"></div> -->
-  </div>
+      <h3 class="py-4 ml-2 flex items-center justify-center text-xl">
+        <a
+          href="https://www.werk1000x.com"
+          class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4"
+          >Go to Website</a
+        >
+      </h3>
+      <!-- <div class="gradientLine mx-auto md:ml-2"></div> -->
+    </div>
     <LayoutFooter class="mt-8" />
   </div>
 </template>
@@ -155,7 +161,7 @@ export default {
     const isOpen = inject("isOpen");
     const formatKey = (key) => key.replace(/([A-Z])/g, " $1").trim();
     //* data yazım
-    
+
     //* topicContentYazımı
     function parseContent(text) {
       // '?' işaretine göre paragraflara ayır
@@ -214,9 +220,9 @@ export default {
       }
     });
 
-   //* Table 1
+    //* Table 1
 
-   const tableHeaders = ref([
+    const tableHeaders = ref([
       "Token Holders",
       "Distribution",
       "Tokens",
@@ -307,7 +313,7 @@ export default {
     ]);
 
     const tableData2 = ref([
-    {
+      {
         month: "January 2024",
         total: "1.000",
         distribution: "41,66667",

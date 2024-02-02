@@ -3,9 +3,8 @@
     class="content lg:p-4 sm:ml-64 lg:mr-64 border-r border-r-zinc-500/25 transition-all duration-300 ease-linear"
     :class="{ 'blurBg': isOpen }"
   >
-  
     <h1
-      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white  py-4 mt-4"
+      class="text-center flex items-center justify-center flex-wrap w-3/4 md:w-10/12 mx-auto !text-2xl lg:!text-5xl font-header font-semibold bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white py-4 mt-4"
     >
       {{ formatKey(topic) }}
     </h1>
@@ -49,15 +48,17 @@
             <div>
               <span class="text-white mr-2">E-Mail :</span>
               <a
-                href="mailto:info@comingsoon.com"
+                href="mailto:contact@werk1000x.com"
                 class="text-blue-300 hover:text-blue-500"
-                >info@comingsoon.com</a
+                >contact@werk1000x.com</a
               >
             </div>
             <div>
-              <span class="text-white mr-2">WebSite :</span>
-              <a href="https://werk1000x.netlify.app/" class="text-blue-300 hover:text-blue-500"
-                >https://werk1000x.netlify.app/</a
+              <span class="text-white mr-2">Website :</span>
+              <a
+                href="https://www.werk1000x.com"
+                class="text-blue-300 hover:text-blue-500"
+                >https://www.werk1000x.com</a
               >
             </div>
           </div>
@@ -90,13 +91,17 @@
       </p>
     </div>
     <p v-else v-html="content"></p>
-    <div class="header ">
-    <h3 class="py-4  ml-2 flex items-center justify-center text-xl">
-      <a href="https://werk1000x.netlify.app/" class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4">Go to WebSite</a>
-    </h3>
+    <div class="header">
+      <h3 class="py-4 ml-2 flex items-center justify-center text-xl">
+        <a
+          href="https://www.werk1000x.com"
+          class="bg-clip-text text-transparent bg-gradient-to-r from-mkSecondary to-white border p-4"
+          >Go to Website</a
+        >
+      </h3>
 
-    <div class="gradientLine mx-auto md:ml-2"></div>
-  </div>
+      <div class="gradientLine mx-auto md:ml-2"></div>
+    </div>
     <LayoutFooter />
   </div>
 </template>
@@ -294,7 +299,7 @@ export default defineComponent({
     ]);
 
     const tableData2 = ref([
-    {
+      {
         month: "January 2024",
         total: "1.000",
         distribution: "41,66667",
@@ -400,6 +405,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-
-</style>
+<style></style>
